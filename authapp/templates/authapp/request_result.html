@@ -1,0 +1,11 @@
+{% extends "authapp/base.html" %}
+
+{% block content %}
+<h1>Check Canvas Inbox</h1>
+<p>{{ message }}</p>
+{% if canvas_inbox_url %}
+<p>
+  <a href="{{ canvas_inbox_url }}" target="_blank" rel="noopener noreferrer">Open Canvas Inbox</a>
+</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "authapp/base.html" %}
+
+{% block content %}
+<h1>Login With Canvas Inbox</h1>
+<p>Enter your Canvas login ID to receive a one-time magic link in your Canvas Inbox.</p>
+<p>Course context: <span class="mono">{{ course_id }}</span></p>
+<form method="post" action="{% url 'request-link' %}">
+  {% csrf_token %}
+  <input type="hidden" name="course_id" value="{{ form.course_id.value }}">
+  <label for="id_login_id">Login ID</label>
+  <input id="id_login_id" name="login_id" type="text" required placeholder="e.g. treharne@liverpool.ac.uk">
+  <button type="submit">Send Magic Link</button>
+</form>
+{% endblock %}

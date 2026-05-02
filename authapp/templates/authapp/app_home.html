@@ -1,0 +1,8 @@
+{% extends "authapp/base.html" %}
+
+{% block content %}
+<h1>Signed In</h1>
+<p>You are authenticated in this app.</p>
+<p>Name: <strong>{{ student.full_name|default:"Unknown Student" }}</strong></p>
+<p>Canvas User ID: <span class="mono">{{ student.canvas_user_id }}</span></p>
+{% endblock %}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Canvas Magic Login</title>
+  <style>
+    :root {
+      --bg: #f4f7f8;
+      --card: #ffffff;
+      --text: #17324d;
+      --muted: #5b6b7a;
+      --accent: #006fbf;
+      --accent-hover: #005ca0;
+      --border: #d9e3ea;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top left, #eaf4fb 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .card {
+      width: min(560px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(14, 47, 76, 0.08);
+      padding: 1.5rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.35rem;
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.45;
+      margin: 0.5rem 0 1rem;
+    }
+    label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+    input {
+      width: 100%;
+      padding: 0.72rem;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 0.98rem;
+      margin-bottom: 0.8rem;
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      border-radius: 9px;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover { background: var(--accent-hover); }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: #f3f7fa;
+      border: 1px solid #dde8f0;
+      padding: 0.12rem 0.35rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
